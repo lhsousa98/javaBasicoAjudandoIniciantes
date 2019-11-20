@@ -16,12 +16,35 @@ public class TestaCondicionaisBooleanas {
 		/* Obs: o acompanhado continua true, por causa que tem mais de 3 pessoas maior
 		 de idade, acompanhadas ao menor de idade*/
 		System.out.println("valor de acompanhado = " + acompanhado);
+		
+		boolean acompanhado1;
 
-		if (idade >= 18 || acompanhado) {
+		if (idade >= 18 && acompanhado) {
 			System.out.println("Seja bem vindo!");
 		} else {
 			System.out.println("Infelizmente você não pode entrar, " + "menor de idade.");
 		}
+		
+		/**
+		 * Escopo de inicialização, uma váriavel criada dentro de uma condição
+		 * só existe dentro dessa condição, quando sair dela não existe mais ela morre
+		 */
+		
+		if (qtdePessoas >= 4) {
+			//só existe no if
+			int x = 1;
+			acompanhado1 = true;
+		}
+		else {
+			//só existe no else
+			int x = 2;
+			acompanhado1 = false;
+		}
+		
+		System.out.println("valor acompanhado = " + acompanhado1);
+		
+		//o x não compilará só funciona dentro da condição, onde foi declarada
+		
 
 	}
 
